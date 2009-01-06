@@ -11,7 +11,7 @@ Source0:        http://hg.ocaml.info/release/postgresql-ocaml/archive/postgresql
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 BuildRequires:  ocaml >= 3.10.0
-BuildRequires:  findlib
+BuildRequires:  ocaml-findlib
 BuildRequires:  postgresql-devel
 BuildRequires:  chrpath
 BuildRequires:  rpm >= 4.4.2.3-2
