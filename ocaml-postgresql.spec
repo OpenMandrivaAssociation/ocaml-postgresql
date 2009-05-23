@@ -1,5 +1,5 @@
 Name:           ocaml-postgresql
-Version:        1.10.3
+Version:        1.11.1
 Release:        %mkrel 1
 Summary:        OCaml library for accessing PostreSQL databases
 
@@ -67,7 +67,7 @@ rm -rf %{buildroot}
 
 %files devel
 %defattr(-,root,root,-)
-%doc LICENSE AUTHORS Changes README.txt examples
+%doc LICENSE AUTHORS Changelog README.txt examples
 %{_libdir}/ocaml/postgresql/*.a
 %{_libdir}/ocaml/postgresql/*.cmxa
 %{_libdir}/ocaml/postgresql/*.mli
