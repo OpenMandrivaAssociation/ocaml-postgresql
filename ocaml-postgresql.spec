@@ -1,5 +1,5 @@
 Name:           ocaml-postgresql
-Version:        1.12.1
+Version:        1.12.5
 Release:        %mkrel 1
 Summary:        OCaml library for accessing PostreSQL databases
 
