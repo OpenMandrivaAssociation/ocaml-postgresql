@@ -1,6 +1,6 @@
 Name:           ocaml-postgresql
-Version:        1.12.5
-Release:        %mkrel 1
+Version:        1.14.0
+Release:        1
 Summary:        OCaml library for accessing PostreSQL databases
 
 Group:          Development/Other
@@ -14,7 +14,6 @@ BuildRequires:  ocaml >= 3.10.0
 BuildRequires:  ocaml-findlib
 BuildRequires:  postgresql-devel
 BuildRequires:  chrpath
-BuildRequires:  rpm >= 4.4.2.3-2
 
 %description
 This OCaml-library provides an interface to PostgreSQL, an efficient
@@ -25,7 +24,6 @@ connections and results of queries.
 
 %package        devel
 Summary:        Development files for %{name}
-Group:          Development/Other
 Requires:       %{name} = %{version}-%{release}
 
 %description    devel
@@ -36,26 +34,17 @@ developing applications that use %{name}.
 %setup -q -n postgresql-ocaml-release-%{version}
 
 %build
-make
+%make
 
-strip lib/dll*.so
 chrpath --delete lib/dll*.so
 
 %install
 # These rules work if the library uses 'ocamlfind install' to install itself.
-rm -rf %{buildroot}
-export DESTDIR=%{buildroot}
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 mkdir -p $OCAMLFIND_DESTDIR $OCAMLFIND_DESTDIR/stublibs
-make install
-
-
-%clean
-rm -rf %{buildroot}
-
+%makeinstall_std
 
 %files
-%defattr(-,root,root,-)
 %doc LICENSE
 %{_libdir}/ocaml/postgresql
 %exclude %{_libdir}/ocaml/postgresql/*.a
@@ -64,9 +53,7 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/stublibs/*.so
 %{_libdir}/ocaml/stublibs/*.so.owner
 
-
 %files devel
-%defattr(-,root,root,-)
 %doc LICENSE AUTHORS Changelog README.txt examples
 %{_libdir}/ocaml/postgresql/*.a
 %{_libdir}/ocaml/postgresql/*.cmxa
