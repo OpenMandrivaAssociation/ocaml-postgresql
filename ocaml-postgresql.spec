@@ -60,3 +60,42 @@ mkdir -p $OCAMLFIND_DESTDIR $OCAMLFIND_DESTDIR/stublibs
 %{_libdir}/ocaml/postgresql/*.mli
 
 
+
+
+%changelog
+* Sun Apr 10 2011 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.14.0-1
++ Revision: 652382
+- new version
+- cleanups
+
+* Thu Aug 12 2010 Florent Monnier <blue_prawn@mandriva.org> 1.12.5-1mdv2011.0
++ Revision: 569280
+- updated version
+
+* Sat Sep 19 2009 Florent Monnier <blue_prawn@mandriva.org> 1.12.1-1mdv2010.0
++ Revision: 444717
+- new version
+
+* Thu Sep 10 2009 Florent Monnier <blue_prawn@mandriva.org> 1.12.0-1mdv2010.0
++ Revision: 437543
+- new version
+- new version
+
+* Sun Jun 28 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.11.1-2mdv2010.0
++ Revision: 390300
+- rebuild
+
+* Sat May 23 2009 Florent Monnier <blue_prawn@mandriva.org> 1.11.1-1mdv2010.0
++ Revision: 379092
+- updated version
+- updated version
+
+* Tue Jan 06 2009 Florent Monnier <blue_prawn@mandriva.org> 1.9.3-1mdv2009.1
++ Revision: 326206
+- findlib package name
+- import ocaml-postgresql
+
+
+* Sat Dec 20 2008 Florent Monnier <fmonnier@linux-nantes.org> 1.9.3-1mdv
+- Initial RPM release made from the fedora rpm .spec file (revision 1.9) by Richard W.M. Jones
+# found there: http://cvs.fedoraproject.org/viewvc/devel/ocaml-postgresql/ocaml-postgresql.spec
