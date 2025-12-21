@@ -10,6 +10,7 @@ Source0:        http://hg.ocaml.info/release/postgresql-ocaml/archive/postgresql
 # curl http://hg.ocaml.info/release/postgresql-ocaml/archive/release-%{version}.tar.bz2 > postgresql-ocaml-release-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
+BuildRequires:	make
 BuildRequires:  ocaml >= 3.10.0
 BuildRequires:  ocaml-findlib
 BuildRequires:  postgresql-devel
